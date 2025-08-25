@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #9650ff;
+  font-family: Arial, sans-serif;
+}
+
+.box {
+  width: 300px;
+  height: 330px;
+  background: rgb(211, 196, 238);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 15px;
+}
+.box h3 {
+  text-align: center;
+}
+
+.outputarea {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.outputarea input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.outputarea button {
+  padding: 8px;
+  border: none;
+  background: #6a0dad;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.outputarea button:hover {
+  background: #520b9b;
+}
+.lengtharea {
+  display: flex;
+  align-items: center;
+}
+.lengtharea h4 {
+  flex: 1;
+  height: fit-content;
+  align-items: center;
+}
+.lengtharea input {
+  height: 30px;
+  width: 45px;
+  padding-left: 7px;
+  border: none;
+  border-radius: 6px;
+}
+.UCarea,
+.LCarea,
+.NUMarea,
+.SYMarea {
+  display: flex;
+  align-items: center;
+}
+.UCarea h4,
+.SYMarea h4,
+.LCarea h4,
+.NUMarea h4 {
+  flex: 1;
+
+  height: fit-content;
+  align-items: center;
+}
+.UCarea input,
+.SYMarea input,
+.LCarea input,
+.NUMarea input {
+  border: none;
+  border-radius: 6px;
+}
+.btn {
+  display: flex;
+}
+.btn button {
+  padding: 8px;
+  flex: 1;
+  border: none;
+  background: #6a0dad;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn button:hover {
+  background: #520b9b;
+}
