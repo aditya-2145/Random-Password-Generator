@@ -24,9 +24,37 @@ body {
   flex-direction: column;
   padding: 15px;
   gap: 15px;
+
+  /* 🔥 entrance animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
 }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.box:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
 .box h3 {
   text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .outputarea {
@@ -41,6 +69,12 @@ body {
   border: 1px solid #ccc;
   border-radius: 6px;
   outline: none;
+  transition: all 0.3s ease;
+}
+
+.outputarea input:focus {
+  border-color: #6a0dad;
+  box-shadow: 0 0 6px rgba(106, 13, 173, 0.5);
 }
 
 .outputarea button {
@@ -50,12 +84,14 @@ body {
   color: white;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .outputarea button:hover {
   background: #520b9b;
+  transform: scale(1.05);
 }
+
 .lengtharea {
   display: flex;
   align-items: center;
@@ -71,7 +107,13 @@ body {
   padding-left: 7px;
   border: none;
   border-radius: 6px;
+  text-align: center;
+  transition: box-shadow 0.3s;
 }
+.lengtharea input:focus {
+  box-shadow: 0 0 6px rgba(106, 13, 173, 0.5);
+}
+
 .UCarea,
 .LCarea,
 .NUMarea,
@@ -84,7 +126,6 @@ body {
 .LCarea h4,
 .NUMarea h4 {
   flex: 1;
-
   height: fit-content;
   align-items: center;
 }
@@ -94,9 +135,19 @@ body {
 .NUMarea input {
   border: none;
   border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
+.UCarea input:hover,
+.SYMarea input:hover,
+.LCarea input:hover,
+.NUMarea input:hover {
+  transform: scale(1.2);
+}
+
 .btn {
   display: flex;
+  gap: 10px;
 }
 .btn button {
   padding: 8px;
@@ -106,8 +157,26 @@ body {
   color: white;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
 }
 .btn button:hover {
   background: #520b9b;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* 🔥 optional pulse effect for "copy" action */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.copy-pulse {
+  animation: pulse 0.3s ease;
 }

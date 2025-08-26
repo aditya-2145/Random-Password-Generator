@@ -2,18 +2,24 @@ import "./App.css";
 import { useState } from "react";
 import { UC, LC, SYM, NUM } from "./data/PassData";
 import { ToastContainer, toast } from "react-toastify";
+import useSound from "use-sound";
+import successSound from "./assets/sounds/completed.mp3";
+import errorSound from "./assets/sounds/error.mp3";
+import copySound from "./assets/sounds/copy.mp3";
 function App() {
   const notify = () => toast("⚠️ Inavlid Choice.", { theme: "dark" });
   let [uppercase, setUppercase] = useState(false);
   let [lowercase, setLowercase] = useState(false);
   let [number, setNumber] = useState(false);
   let [symbol, setSymbol] = useState(false);
+  const [playSuccess] = useSound(successSound);
+  const [playError] = useSound(errorSound);
+  const [playCopy] = useSound(copySound);
   let [passLength, setPassLength] = useState(10);
   let [password, setPassword] = useState("");
   let generatePass = () => {
     let charOptions = "";
     let generatedPass = "";
-
     if (uppercase || lowercase || number || symbol) {
       if (uppercase) charOptions += UC;
       if (lowercase) charOptions += LC;
@@ -25,21 +31,24 @@ function App() {
         );
       }
       setPassword(generatedPass);
+      playSuccess();
       console.log(generatedPass);
     } else {
       {
         notify();
+        playError();
       }
     }
   };
   let copyPassword = () => {
     navigator.clipboard.writeText(password);
+    playCopy();
   };
   return (
     <div>
       <div className="completePage">
         <div className="box">
-          <h3>Password Generator</h3>
+          <h3>PASSWORD GENERATOR</h3>
           <div className="outputarea">
             <input type="text" value={password} readOnly />
             <button onClick={copyPassword}>COPY</button>
