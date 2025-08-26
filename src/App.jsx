@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import useSound from "use-sound";
 import successSound from "./assets/sounds/completed.mp3";
 import copySound from "./assets/sounds/copy.mp3";
+
 function App() {
   useEffect(() => {
     generatePass();
@@ -92,6 +93,7 @@ function App() {
                 const value = Number(e.target.value);
                 const minValue = getTotalSelected();
                 const maxValue = 20;
+                playCopy();
                 setPassLength(Math.min(Math.max(value, minValue), maxValue));
               }}
               min={getTotalSelected()}
