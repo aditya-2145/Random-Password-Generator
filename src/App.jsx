@@ -1,4 +1,5 @@
 import "./App.css";
+
 import { useEffect, useState } from "react";
 import { UC, LC, SYM, NUM } from "./data/PassData";
 import { ToastContainer, toast } from "react-toastify";

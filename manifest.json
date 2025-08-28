@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Random Password Generator",
+  "description": "Generate secure random passwords in a small popup window.",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Random Password Generator"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
