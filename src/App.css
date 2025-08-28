@@ -182,7 +182,6 @@ body {
 
 .btn {
   display: flex;
-  gap: 10px;
 }
 .btn button {
   padding: 8px;
