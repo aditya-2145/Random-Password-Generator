@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  <img src="readme assets/logo_.png" alt="Password Generator Logo" width="320" />
+  <img src="readme assets/logo_.png" alt="Password Generator Logo" width="250" />
 </p>
 
 <h3 align="center">
@@ -54,7 +54,7 @@ It can also be installed as a **Chrome Extension** for quick password generation
 
 <p align="center">
   <img src="readme assets/website.png" width="45%" alt="Password Generator App" />
-  <img src="readme assets/extension.png" width="45%" alt="Chrome Extension View" />
+  <img src="readme assets/extension.png" width="35%" alt="Chrome Extension View" />
 </p>
 
 ---
