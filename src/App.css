@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* Desktop */
+.container {
+  padding: 40px;
+  font-size: 24px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    font-size: 16px;
+  }
+}
 
 * {
   margin: 0;
