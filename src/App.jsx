@@ -77,7 +77,7 @@ function App() {
     (symbol ? 1 : 0);
 
   return (
-    <div className="container">
+    <div>
       <div className="completePage">
         <div className="box">
           <h3>PASSWORD GENERATOR</h3>
